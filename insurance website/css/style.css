@@ -160,6 +160,8 @@ body {
     right: 0;
     top: 20%;
     z-index: 3;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .hero .heroimg .customers2 {
@@ -170,11 +172,13 @@ body {
 
 .hero .heroimg .customers2 {
     background-color: #fff;
-    padding: 5px 20px;
+    padding: 7px 10px;
     position: absolute;
     left: -5%;
     bottom: 30%;
     z-index: 3;
+    border-radius: 7px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .hero .heroimg .customers2 h3 {
@@ -706,8 +710,8 @@ body .section h6 {
 
 .testim .cont div .img img {
     display: block;
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     margin: auto;
     border-radius: 50%;
 }
@@ -1239,6 +1243,8 @@ body .section h6 {
     margin-top: 70px;
 }
 
+/* mobile view  */
+
 @media only screen and (max-width:768px) {
     .section.services .card {
         margin: 0 0 20px;
@@ -1320,7 +1326,11 @@ body .section h6 {
         bottom: -20%;
     }
 
-    .section h3, .section.services h2, .section.steps h2, .section.supportteam h2, .section.Testimonials h2 {
+    .section h3,
+    .section.services h2,
+    .section.steps h2,
+    .section.supportteam h2,
+    .section.Testimonials h2 {
         font-size: 25px;
     }
 
@@ -1335,6 +1345,26 @@ body .section h6 {
 
     .section.Testimonials .card {
         max-width: 100%;
+    }
+
+    .stepsRow img.curve1 {
+        display: none;
+    }
+
+    .stepsRow img.curve3 {
+        display: none;
+    }
+
+    .stepsRow img.curve2 {
+        display: none;
+    }
+
+    .section.supportteam img {
+        height: 40px;
+    }
+
+    .section.steps .card:hover {
+        transform: translateY(-8px);
     }
 }
 
@@ -1379,4 +1409,32 @@ body .section h6 {
 
 .navbar-nav .nav-item.dropdown .submenus ul li a i {
     padding-right: 7px;
+}
+
+.stepsRow {
+    position: relative;
+}
+
+.stepsRow img.curve1 {
+    position: absolute;
+    left: 20%;
+    height: 50px;
+    width: fit-content;
+    top: -30px;
+}
+
+.stepsRow img.curve3 {
+    position: absolute;
+    right: 20%;
+    height: 50px;
+    width: fit-content;
+    top: -30px;
+}
+
+.stepsRow img.curve2 {
+    position: absolute;
+    left: 47%;
+    height: 50px;
+    width: fit-content;
+    bottom: -10px;
 }
