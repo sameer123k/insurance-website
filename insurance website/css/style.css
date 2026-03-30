@@ -24,6 +24,9 @@ body {
     background: var(--primary);
     border: none;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    padding: 5px 15px;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .btn-primary:hover {
@@ -47,13 +50,30 @@ body {
 .footer {
     background-image: url(../img/herobg.png);
     padding: 40px 0;
+    margin-top: 30px;
 }
 
-.footer a {
+.footer .widget a {
     text-decoration: none;
     color: #333;
     display: block;
-    margin-bottom: 8px;
+    margin: 0 0 10px;
+    width: fit-content;
+    border-bottom: 1px solid transparent;
+}
+
+.footer .widget a:hover::after {
+    content: "\2198";
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.footer .widget a:hover {
+    letter-spacing: .6px;
+    color: var(--secondary);
+    transition: all 0.2s ease-in;
+    font-weight: 500;
+    border-bottom: 1px solid var(--secondary);
 }
 
 .badge-box {
@@ -285,6 +305,14 @@ body .section h6 {
     width: 60px;
     border-radius: 50px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section.services .card .cirlce img {
+    height: 30px;
+    width: auto;
 }
 
 .section.services .card h5 {
@@ -306,10 +334,29 @@ body .section h6 {
 
 .section.services .card {
     padding: 22px;
+    transition: all .2s ease-in;
 }
 
-.section.services .card a i {
-    transform: rotate(90deg);
+.section.services .card:hover {
+    background-color: var(--primary);
+    transition: all .2s ease-in;
+}
+
+.section.services .card:hover h5 {
+    color: #fff;
+}
+
+.section.services .card:hover p {
+    color: #ececec;
+}
+
+.section.services .card:hover a {
+    color: #ececec;
+}
+
+.section.services .card a i::before {
+    transform: rotate(-30deg);
+    font-weight: bold;
 }
 
 .section.services .readmore {
@@ -333,7 +380,7 @@ body .section h6 {
 
 .section.steps h2 {
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 38px;
     margin: 15px 0 0;
 }
@@ -351,7 +398,14 @@ body .section h6 {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 0;
     position: relative;
+    transition: all .3s ease-in;
     text-align: left;
+    cursor: pointer;
+}
+
+.section.steps .card:hover {
+    transform: translateY(-20px);
+    transition: all .3s ease-in;
 }
 
 .section.steps .card .btn {
@@ -1145,8 +1199,15 @@ body .section h6 {
     margin: 0;
 }
 
-.footer .social .sociallinks a i {
-    font-size: 28px;
+.footer .social .sociallinks a img {
+    height: 30px;
+    width: auto;
+    transition: all .2s ease-in;
+}
+
+.footer .social .sociallinks a img:hover {
+    transform: translateY(-8px);
+    transition: all .2s ease-in;
 }
 
 .footer .social .terms {
@@ -1157,12 +1218,17 @@ body .section h6 {
 
 .footer .social .terms a {
     font-weight: 600;
+    text-decoration: none;
+    color: black;
 }
 
 .footer .copyTag {
     text-align: center;
     margin: 20px 0 0;
     font-size: 17px;
+    width: 100%;
+    text-decoration: none;
+    color: black;
 }
 
 .footer p {
@@ -1209,21 +1275,25 @@ body .section h6 {
     .section.section.supportteam .contactDetails .leftDiv .callNow i {
         font-size: 18px;
     }
-    .testim .cont div p{
-        width: 95%;
+
+    .testim .cont div p {
+        width: 80%;
         line-height: 1.6;
     }
-    .testim .arrow.left{
+
+    .testim .arrow.left {
         left: 0;
     }
-      .testim .arrow.right{
+
+    .testim .arrow.right {
         right: 0;
     }
 
     .section.section.supportteam .contactDetails .rightDiv .callNow i {
         font-size: 18px;
     }
-    .section.Testimonials .testim .wrap{
+
+    .section.Testimonials .testim .wrap {
         padding: 15px 0;
     }
 
@@ -1235,4 +1305,78 @@ body .section h6 {
     .section.section.supportteam .contactDetails .rightDiv {
         justify-content: center;
     }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero .heroimg .customers {
+        top: -80px;
+        padding: 5px;
+        border-radius: 8px;
+    }
+
+    .hero .heroimg .customers2 {
+        bottom: -20%;
+    }
+
+    .section h3, .section.services h2, .section.steps h2, .section.supportteam h2, .section.Testimonials h2 {
+        font-size: 25px;
+    }
+
+    .section ul li {
+        font-size: 15px;
+    }
+
+    .section ul li img {
+        height: 30px;
+        padding: 5px 0;
+    }
+
+    .section.Testimonials .card {
+        max-width: 100%;
+    }
+}
+
+.navbar-nav .nav-item.dropdown .submenus {
+    background-color: #fff;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 200px;
+    z-index: 9999;
+    display: none;
+}
+
+.navbar-nav .nav-item.dropdown:hover .submenus {
+    display: block;
+}
+
+.navbar-nav .nav-item.dropdown {
+    position: relative;
+}
+
+.navbar-nav .nav-item.dropdown .submenus ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+.navbar-nav .nav-item.dropdown .submenus ul li {
+    padding: 5px 15px;
+    font-size: 16px;
+}
+
+.navbar-nav .nav-item.dropdown .submenus ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.navbar-nav .nav-item.dropdown .submenus ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-item.dropdown .submenus ul li a i {
+    padding-right: 7px;
 }
